@@ -1,5 +1,8 @@
 package org.dq.netty.nio;
 
+/**
+ * 多路复用选择器selector实现
+ */
 public class TimeServer {
     public static void main(String[] args) {
         int port = 8080;

@@ -1,6 +1,8 @@
 package org.dq.netty.aio;
 
-
+/**
+ * 事件驱动aio实现
+ */
 public class TimeServer {
     public static void main(String[] args) {
         int port = 8080;
