@@ -20,13 +20,7 @@ public class EchoServer {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        if (args.length != 1) {
-            System.err.println(
-                    "Usage: " + EchoServer.class.getSimpleName() +
-                            " <port>");
-        }
-        int port = Integer.parseInt(args[0]);
-        new EchoServer(port).start();
+        new EchoServer(8080).start();
     }
 
     private void start() throws InterruptedException {
@@ -40,7 +34,7 @@ public class EchoServer {
                     socketChannel.pipeline().addLast(serverHandler);
                 }
             });
-            ChannelFuture future = new ServerBootstrap().bind().sync();
+            ChannelFuture future = serverBootstrap.bind().sync();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
