@@ -18,8 +18,7 @@ public class AbsIntegerEncoderTest {
         assertTrue(embeddedChannel.writeOutbound(byteBuf.retain()));
         assertTrue(embeddedChannel.finish());
         for (var i = 0; i < 10; i++) {
-            Object o = embeddedChannel.readOutbound();
-            assertEquals(i,o);
+            assertEquals(i,(Object) embeddedChannel.readOutbound());
         }
     }
 }
