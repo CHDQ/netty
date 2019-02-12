@@ -29,7 +29,7 @@
   |                      名称                       |                                  描述                                  |
   | :---------------------------------------------: | :--------------------------------------------------------------------: |
   | AddFirst<br/>addBefore<br/>addAfter<br/>addLast |            将一个 ChannelHandler 添加到 ChannelPipeline 中             |
-  |                     remove                      |            将一个 ChannelHandler 从 ChannelPipeline 中移除             |
+  |                     remove                      |            将一个 ChannelHandler 从 Channe****lPipeline 中移除             |
   |                     replace                     | 将 ChannelPipeline 中的一个 ChannelHandler 替换为另一个 ChannelHandler |
 
 - 总结
