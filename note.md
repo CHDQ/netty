@@ -31,3 +31,8 @@
   | AddFirst<br/>addBefore<br/>addAfter<br/>addLast |            将一个 ChannelHandler 添加到 ChannelPipeline 中             |
   |                     remove                      |            将一个 ChannelHandler 从 ChannelPipeline 中移除             |
   |                     replace                     | 将 ChannelPipeline 中的一个 ChannelHandler 替换为另一个 ChannelHandler |
+
+- 总结
+    1. ChannelPipeline 保存了与 Channel 相关联的 ChannelHandler；
+    2. ChannelPipeline 可以根据需要，通过添加或者删除 ChannelHandler 来动态地修改；
+    3. ChannelPipeline 有着丰富的 API 用以被调用，以响应入站和出站事件
