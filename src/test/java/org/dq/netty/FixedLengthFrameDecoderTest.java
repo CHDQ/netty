@@ -15,9 +15,9 @@ public class FixedLengthFrameDecoderTest {
             byteBuf.writeByte(i);
         }
         var input = byteBuf.duplicate();
-        var embeddedChannel = new EmbeddedChannel(new FixedLengthFrameDecoder(3));
+        var embeddedChannel = new EmbeddedChannel(new FixedLengthFrameDecoder(3));//可以用来测试ChannelHandler
 //        assertTrue(embeddedChannel.writeInbound(input.retain()));//该断言通过
-        assertTrue(embeddedChannel.writeInbound(input.readBytes(2)));//该顺序下，断言不通过，因为readInbound获取不到内容
+        assertTrue(embeddedChannel.writeInbound(input.readBytes(2)));//该顺序下，断言不通过，因为readInbound获取不到内容（只有多于3个字节的时候，才会产生输出）
         assertTrue(embeddedChannel.writeInbound(input.readBytes(7)));
         assertTrue(embeddedChannel.finish());
         var read = (ByteBuf) embeddedChannel.readInbound();
