@@ -7,6 +7,7 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.util.AttributeKey;
 import org.dq.netty.netty.echo.client.EchoClientHandler;
 
 import java.net.InetSocketAddress;
@@ -28,6 +29,7 @@ public class CreateServerFromChannel {
     public void start() {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
+            final AttributeKey<Integer> key = AttributeKey.newInstance("ID");//使用属性值
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(group).channel(NioServerSocketChannel.class).localAddress(new InetSocketAddress(port)).childHandler(new SimpleChannelInboundHandler<ByteBuf>() {
                 ChannelFuture connectFuture;
@@ -48,11 +50,13 @@ public class CreateServerFromChannel {
 
                 @Override
                 protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
+                    System.out.println(ctx.channel().attr(key).get());//获取属性值
                     if (connectFuture.isDone()) {
                         System.out.println("data");
                     }
                 }
             });
+            serverBootstrap.attr(key, 1234);//设置属性值，后面在channel中调用
             ChannelFuture future = serverBootstrap.bind().sync();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
