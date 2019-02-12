@@ -22,11 +22,11 @@ public class CreateServerFromChannel {
         this.port = port;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new CreateServerFromChannel(8089).start();
     }
 
-    public void start() {
+    public void start() throws InterruptedException {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
             final AttributeKey<Integer> key = AttributeKey.newInstance("ID");//使用属性值
@@ -61,6 +61,8 @@ public class CreateServerFromChannel {
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            group.shutdownGracefully().sync();//释放线程资源
         }
     }
 }

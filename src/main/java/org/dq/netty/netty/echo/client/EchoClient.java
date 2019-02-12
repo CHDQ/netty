@@ -38,7 +38,7 @@ public class EchoClient {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            group.shutdownGracefully().sync();
+            group.shutdownGracefully().sync();//释放线程资源
         }
     }
 }
