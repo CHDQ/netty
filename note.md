@@ -41,3 +41,7 @@
 
 - 章节6.3
 - ChannelHandlerContext 代表了 ChannelHandler 和 ChannelPipeline 之间的关联，每当有 ChannelHandler 添加到 ChannelPipeline 中时，都会创建 ChannelHandlerContext。 ChannelHandlerContext 的主要功能是管理它所关联的 ChannelHandler 和在同一个 ChannelPipeline 中的其他 ChannelHandler 之间的交互
+
+## 4. **_EventLoop_** 
+
+- 尽可能地重用 EventLoop，以减少线程创建所带来的开销
