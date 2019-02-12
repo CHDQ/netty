@@ -45,3 +45,8 @@
 ## 4. **_EventLoop_** 
 
 - 尽可能地重用 EventLoop，以减少线程创建所带来的开销
+
+## 5. **_编码器解码器_** 
+
+- 146页
+    >引用计数对于编码器和解码器来说，其过程也是相当的简单：一旦消息被编码或者解码，它就会被 ReferenceCountUtil.release(message)调用自动释放。如果你需要保留引用以便稍后使用，那么你可以调用 ReferenceCountUtil.retain(message)方法。这将会增加该引用计数，从而防止该消息被释放。
