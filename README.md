@@ -1,4 +1,6 @@
 # _netty 实战关键笔记_
+![image](https://img.shields.io/badge/jdk-11-brightgreen.svg)
+![image](https://img.shields.io/badge/netty-4.1.33-brightgreen.svg)
 
 ## 1. **_资源管理_**
 
