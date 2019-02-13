@@ -23,7 +23,7 @@ public class ChatServer {
         bootStart.group(group).channel(NioServerSocketChannel.class).childHandler(createInitializer(channels));
         ChannelFuture future = bootStart.bind(address);
         future.syncUninterruptibly();
-        channel = future.channel();
+        channel = future.channel();//父channel
         return future;
     }
 
