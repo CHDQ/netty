@@ -33,9 +33,8 @@ public class HttpRequestHandler extends SimpleChannelInboundHandler<FullHttpRequ
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest request) throws Exception {
-        System.out.println(request.uri());
-        if (wsUri.equalsIgnoreCase(request.uri())) {
-            ctx.fireChannelRead(request.retain());//增加引用计数，防止释放
+        if (wsUri.equalsIgnoreCase(request.uri())) {//对请求的处理，只处理后缀为/ws的请求
+            ctx.fireChannelRead(request.retain());//增加引用计数，防止释放，传递给后面的handler处理
         } else {
             if (HttpUtil.is100ContinueExpected(request)) {
                 send100Continued(ctx);
