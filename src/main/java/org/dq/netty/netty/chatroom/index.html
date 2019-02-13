@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>WS测试</h1>
+<input type="text" id="content">
+<button type="button" onclick="send()">发送</button>
+</body>
+<script>
+    //直接在浏览器中打开该文件即可
+    var ws
+    connect()
+
+    function connect() {
+        ws = new WebSocket("ws://localhost:8080/ws");
+        ws.onopen = function () {
+            console.log("open")
+        };
+        ws.onmessage = function (evt) {
+            console.log(evt.data)
+        };
+        ws.onclose = function (evt) {
+            console.log("WebSocketClosed!");
+        };
+        ws.onerror = function (evt) {
+            console.log("WebSocketError!");
+        };
+    }
+
+    function send() {
+        var content = document.getElementById("content").value
+        ws.send(content)
+    }
+</script>
+</html>
