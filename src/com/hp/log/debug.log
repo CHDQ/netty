@@ -1,0 +1,402 @@
+2019-02-14 15:30:06 下午 [Thread: main][ Class:io.netty.util.internal.logging.InternalLoggerFactory >> Method: io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:47) ]
+DEBUG:Using Log4J as the default logging framework
+2019-02-14 15:30:06 下午 [Thread: main][ Class:io.netty.util.internal.InternalThreadLocalMap >> Method: io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:54) ]
+DEBUG:-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2019-02-14 15:30:06 下午 [Thread: main][ Class:io.netty.util.internal.InternalThreadLocalMap >> Method: io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:57) ]
+DEBUG:-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.isWindows0(PlatformDependent.java:955) ]
+DEBUG:Platform: Windows
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.explicitNoUnsafeCause0(PlatformDependent0.java:395) ]
+DEBUG:-Dio.netty.noUnsafe: false
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.javaVersion0(PlatformDependent0.java:871) ]
+DEBUG:Java version: 11
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:120) ]
+DEBUG:sun.misc.Unsafe.theUnsafe: available
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:144) ]
+DEBUG:sun.misc.Unsafe.copyMemory: available
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:182) ]
+DEBUG:java.nio.Buffer.address: available
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:252) ]
+DEBUG:direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:224)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:218)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:47)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:83)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:64)
+	at org.dq.netty.netty.chatroom.ChatServer.<clinit>(ChatServer.java:18)
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:313) ]
+DEBUG:java.nio.Bits.unaligned: available, true
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:372) ]
+DEBUG:jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @18ce0030
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:334)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:325)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:47)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:83)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:64)
+	at org.dq.netty.netty.chatroom.ChatServer.<clinit>(ChatServer.java:18)
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:385) ]
+DEBUG:java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.unsafeUnavailabilityCause0(PlatformDependent.java:992) ]
+DEBUG:sun.misc.Unsafe: available
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.maxDirectMemory0(PlatformDependent.java:1067) ]
+DEBUG:maxDirectMemory: 2116026368 bytes (maybe)
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:1086) ]
+DEBUG:-Dio.netty.tmpdir: C:\Users\admin\AppData\Local\Temp (java.io.tmpdir)
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:1165) ]
+DEBUG:-Dio.netty.bitMode: 64 (sun.arch.data.model)
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:157) ]
+DEBUG:-Dio.netty.maxDirectMemory: -1 bytes
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:164) ]
+DEBUG:-Dio.netty.uninitializedArrayAllocationThreshold: -1
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.CleanerJava9 >> Method: io.netty.util.internal.CleanerJava9.<clinit>(CleanerJava9.java:71) ]
+DEBUG:java.nio.ByteBuffer.cleaner(): available
+2019-02-14 15:30:07 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:184) ]
+DEBUG:-Dio.netty.noPreferDirect: false
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.logging.InternalLoggerFactory >> Method: io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:47) ]
+DEBUG:Using Log4J as the default logging framework
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.InternalThreadLocalMap >> Method: io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:54) ]
+DEBUG:-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.InternalThreadLocalMap >> Method: io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:57) ]
+DEBUG:-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.isWindows0(PlatformDependent.java:955) ]
+DEBUG:Platform: Windows
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.explicitNoUnsafeCause0(PlatformDependent0.java:395) ]
+DEBUG:-Dio.netty.noUnsafe: false
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.javaVersion0(PlatformDependent0.java:871) ]
+DEBUG:Java version: 11
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:120) ]
+DEBUG:sun.misc.Unsafe.theUnsafe: available
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:144) ]
+DEBUG:sun.misc.Unsafe.copyMemory: available
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:182) ]
+DEBUG:java.nio.Buffer.address: available
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:252) ]
+DEBUG:direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:224)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:218)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:47)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:83)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:64)
+	at org.dq.netty.netty.chatroom.ChatServer.<clinit>(ChatServer.java:18)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:313) ]
+DEBUG:java.nio.Bits.unaligned: available, true
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:372) ]
+DEBUG:jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @56a6d5a6
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:334)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:325)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:47)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:83)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:64)
+	at org.dq.netty.netty.chatroom.ChatServer.<clinit>(ChatServer.java:18)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:385) ]
+DEBUG:java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.unsafeUnavailabilityCause0(PlatformDependent.java:992) ]
+DEBUG:sun.misc.Unsafe: available
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.maxDirectMemory0(PlatformDependent.java:1067) ]
+DEBUG:maxDirectMemory: 2116026368 bytes (maybe)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:1086) ]
+DEBUG:-Dio.netty.tmpdir: C:\Users\admin\AppData\Local\Temp (java.io.tmpdir)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:1165) ]
+DEBUG:-Dio.netty.bitMode: 64 (sun.arch.data.model)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:157) ]
+DEBUG:-Dio.netty.maxDirectMemory: -1 bytes
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:164) ]
+DEBUG:-Dio.netty.uninitializedArrayAllocationThreshold: -1
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.CleanerJava9 >> Method: io.netty.util.internal.CleanerJava9.<clinit>(CleanerJava9.java:71) ]
+DEBUG:java.nio.ByteBuffer.cleaner(): available
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:184) ]
+DEBUG:-Dio.netty.noPreferDirect: false
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.channel.MultithreadEventLoopGroup >> Method: io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:44) ]
+DEBUG:-Dio.netty.eventLoopThreads: 8
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.channel.nio.NioEventLoop >> Method: io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:105) ]
+DEBUG:-Dio.netty.noKeySetOptimization: false
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.channel.nio.NioEventLoop >> Method: io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:106) ]
+DEBUG:-Dio.netty.selectorAutoRebuildThreshold: 512
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent$Mpsc.<clinit>(PlatformDependent.java:860) ]
+DEBUG:org.jctools-core.MpscChunkedArrayQueue: available
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.channel.DefaultChannelId >> Method: io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:79) ]
+DEBUG:-Dio.netty.processId: 2732 (auto-detected)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil.<clinit>(NetUtil.java:139) ]
+DEBUG:-Djava.net.preferIPv4Stack: false
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil.<clinit>(NetUtil.java:140) ]
+DEBUG:-Djava.net.preferIPv6Addresses: false
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil.<clinit>(NetUtil.java:224) ]
+DEBUG:Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil$1.run(NetUtil.java:289) ]
+DEBUG:Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2019-02-14 15:40:42 下午 [Thread: main][ Class:io.netty.channel.DefaultChannelId >> Method: io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:101) ]
+DEBUG:-Dio.netty.machineId: 00:00:00:00:00:00:00:e0 (auto-detected)
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.util.ResourceLeakDetector >> Method: io.netty.util.ResourceLeakDetector.<clinit>(ResourceLeakDetector.java:129) ]
+DEBUG:-Dio.netty.leakDetection.level: simple
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.util.ResourceLeakDetector >> Method: io.netty.util.ResourceLeakDetector.<clinit>(ResourceLeakDetector.java:130) ]
+DEBUG:-Dio.netty.leakDetection.targetRecords: 4
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:126) ]
+DEBUG:-Dio.netty.allocator.numHeapArenas: 8
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:127) ]
+DEBUG:-Dio.netty.allocator.numDirectArenas: 8
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:129) ]
+DEBUG:-Dio.netty.allocator.pageSize: 8192
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:134) ]
+DEBUG:-Dio.netty.allocator.maxOrder: 11
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:138) ]
+DEBUG:-Dio.netty.allocator.chunkSize: 16777216
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:139) ]
+DEBUG:-Dio.netty.allocator.tinyCacheSize: 512
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:140) ]
+DEBUG:-Dio.netty.allocator.smallCacheSize: 256
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:141) ]
+DEBUG:-Dio.netty.allocator.normalCacheSize: 64
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:142) ]
+DEBUG:-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:143) ]
+DEBUG:-Dio.netty.allocator.cacheTrimInterval: 8192
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:144) ]
+DEBUG:-Dio.netty.allocator.useCacheForAllThreads: true
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:145) ]
+DEBUG:-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.ByteBufUtil >> Method: io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:83) ]
+DEBUG:-Dio.netty.allocator.type: pooled
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.ByteBufUtil >> Method: io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:92) ]
+DEBUG:-Dio.netty.threadLocalDirectBufferSize: 0
+2019-02-14 15:40:43 下午 [Thread: main][ Class:io.netty.buffer.ByteBufUtil >> Method: io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:95) ]
+DEBUG:-Dio.netty.maxThreadLocalCharBufferSize: 16384
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.logging.InternalLoggerFactory >> Method: io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:47) ]
+DEBUG:Using Log4J as the default logging framework
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.InternalThreadLocalMap >> Method: io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:54) ]
+DEBUG:-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.InternalThreadLocalMap >> Method: io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:57) ]
+DEBUG:-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.isWindows0(PlatformDependent.java:955) ]
+DEBUG:Platform: Windows
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.explicitNoUnsafeCause0(PlatformDependent0.java:395) ]
+DEBUG:-Dio.netty.noUnsafe: false
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.javaVersion0(PlatformDependent0.java:871) ]
+DEBUG:Java version: 11
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:120) ]
+DEBUG:sun.misc.Unsafe.theUnsafe: available
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:144) ]
+DEBUG:sun.misc.Unsafe.copyMemory: available
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:182) ]
+DEBUG:java.nio.Buffer.address: available
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:252) ]
+DEBUG:direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:224)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:218)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:47)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:83)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:64)
+	at org.dq.netty.netty.chatroom.ChatServer.<clinit>(ChatServer.java:22)
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:313) ]
+DEBUG:java.nio.Bits.unaligned: available, true
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:372) ]
+DEBUG:jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @309e345f
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:334)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:325)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:47)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:83)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:64)
+	at org.dq.netty.netty.chatroom.ChatServer.<clinit>(ChatServer.java:22)
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent0 >> Method: io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:385) ]
+DEBUG:java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.unsafeUnavailabilityCause0(PlatformDependent.java:992) ]
+DEBUG:sun.misc.Unsafe: available
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.maxDirectMemory0(PlatformDependent.java:1067) ]
+DEBUG:maxDirectMemory: 2116026368 bytes (maybe)
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:1086) ]
+DEBUG:-Dio.netty.tmpdir: C:\Users\admin\AppData\Local\Temp (java.io.tmpdir)
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:1165) ]
+DEBUG:-Dio.netty.bitMode: 64 (sun.arch.data.model)
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:157) ]
+DEBUG:-Dio.netty.maxDirectMemory: -1 bytes
+2019-02-14 15:47:12 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:164) ]
+DEBUG:-Dio.netty.uninitializedArrayAllocationThreshold: -1
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.internal.CleanerJava9 >> Method: io.netty.util.internal.CleanerJava9.<clinit>(CleanerJava9.java:71) ]
+DEBUG:java.nio.ByteBuffer.cleaner(): available
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:184) ]
+DEBUG:-Dio.netty.noPreferDirect: false
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.channel.MultithreadEventLoopGroup >> Method: io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:44) ]
+DEBUG:-Dio.netty.eventLoopThreads: 8
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.channel.nio.NioEventLoop >> Method: io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:105) ]
+DEBUG:-Dio.netty.noKeySetOptimization: false
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.channel.nio.NioEventLoop >> Method: io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:106) ]
+DEBUG:-Dio.netty.selectorAutoRebuildThreshold: 512
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.internal.PlatformDependent >> Method: io.netty.util.internal.PlatformDependent$Mpsc.<clinit>(PlatformDependent.java:860) ]
+DEBUG:org.jctools-core.MpscChunkedArrayQueue: available
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.channel.DefaultChannelId >> Method: io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:79) ]
+DEBUG:-Dio.netty.processId: 9252 (auto-detected)
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil.<clinit>(NetUtil.java:139) ]
+DEBUG:-Djava.net.preferIPv4Stack: false
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil.<clinit>(NetUtil.java:140) ]
+DEBUG:-Djava.net.preferIPv6Addresses: false
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil.<clinit>(NetUtil.java:224) ]
+DEBUG:Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.NetUtil >> Method: io.netty.util.NetUtil$1.run(NetUtil.java:289) ]
+DEBUG:Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.channel.DefaultChannelId >> Method: io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:101) ]
+DEBUG:-Dio.netty.machineId: 00:00:00:00:00:00:00:e0 (auto-detected)
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.ResourceLeakDetector >> Method: io.netty.util.ResourceLeakDetector.<clinit>(ResourceLeakDetector.java:129) ]
+DEBUG:-Dio.netty.leakDetection.level: simple
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.util.ResourceLeakDetector >> Method: io.netty.util.ResourceLeakDetector.<clinit>(ResourceLeakDetector.java:130) ]
+DEBUG:-Dio.netty.leakDetection.targetRecords: 4
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:126) ]
+DEBUG:-Dio.netty.allocator.numHeapArenas: 8
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:127) ]
+DEBUG:-Dio.netty.allocator.numDirectArenas: 8
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:129) ]
+DEBUG:-Dio.netty.allocator.pageSize: 8192
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:134) ]
+DEBUG:-Dio.netty.allocator.maxOrder: 11
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:138) ]
+DEBUG:-Dio.netty.allocator.chunkSize: 16777216
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:139) ]
+DEBUG:-Dio.netty.allocator.tinyCacheSize: 512
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:140) ]
+DEBUG:-Dio.netty.allocator.smallCacheSize: 256
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:141) ]
+DEBUG:-Dio.netty.allocator.normalCacheSize: 64
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:142) ]
+DEBUG:-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:143) ]
+DEBUG:-Dio.netty.allocator.cacheTrimInterval: 8192
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:144) ]
+DEBUG:-Dio.netty.allocator.useCacheForAllThreads: true
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.PooledByteBufAllocator >> Method: io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:145) ]
+DEBUG:-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.ByteBufUtil >> Method: io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:83) ]
+DEBUG:-Dio.netty.allocator.type: pooled
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.ByteBufUtil >> Method: io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:92) ]
+DEBUG:-Dio.netty.threadLocalDirectBufferSize: 0
+2019-02-14 15:47:13 下午 [Thread: main][ Class:io.netty.buffer.ByteBufUtil >> Method: io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:95) ]
+DEBUG:-Dio.netty.maxThreadLocalCharBufferSize: 16384
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.buffer.AbstractByteBuf >> Method: io.netty.buffer.AbstractByteBuf.<clinit>(AbstractByteBuf.java:61) ]
+DEBUG:-Dio.netty.buffer.checkAccessible: true
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.buffer.AbstractByteBuf >> Method: io.netty.buffer.AbstractByteBuf.<clinit>(AbstractByteBuf.java:62) ]
+DEBUG:-Dio.netty.buffer.checkBounds: true
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.util.ResourceLeakDetectorFactory >> Method: io.netty.util.ResourceLeakDetectorFactory$DefaultResourceLeakDetectorFactory.newResourceLeakDetector(ResourceLeakDetectorFactory.java:202) ]
+DEBUG:Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@32b66799
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.util.Recycler >> Method: io.netty.util.Recycler.<clinit>(Recycler.java:96) ]
+DEBUG:-Dio.netty.recycler.maxCapacityPerThread: 4096
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.util.Recycler >> Method: io.netty.util.Recycler.<clinit>(Recycler.java:97) ]
+DEBUG:-Dio.netty.recycler.maxSharedCapacityFactor: 2
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.util.Recycler >> Method: io.netty.util.Recycler.<clinit>(Recycler.java:98) ]
+DEBUG:-Dio.netty.recycler.linkCapacity: 16
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.util.Recycler >> Method: io.netty.util.Recycler.<clinit>(Recycler.java:99) ]
+DEBUG:-Dio.netty.recycler.ratio: 8
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:165) ]
+DEBUG:[id: 0x67a86117, L:/0:0:0:0:0:0:0:1:8080 - R:/0:0:0:0:0:0:0:1:63594] WebSocket version V13 server handshake
+2019-02-14 15:47:21 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker13.newHandshakeResponse(WebSocketServerHandshaker13.java:136) ]
+DEBUG:WebSocket version 13 server handshake key: ehMdTP7i/wSEswmVmxCQAw==, response: M1+HXF5jItUdJ480oTsaQXo0jzY=
+2019-02-14 15:47:23 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 15:47:23 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=45
+2019-02-14 15:47:23 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=4
+2019-02-14 15:47:24 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 15:47:24 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=45
+2019-02-14 15:47:24 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=4
+2019-02-14 15:47:25 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 15:47:25 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=45
+2019-02-14 15:47:25 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=4
+2019-02-14 16:02:19 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:165) ]
+DEBUG:[id: 0x924c6014, L:/0:0:0:0:0:0:0:1:8080 - R:/0:0:0:0:0:0:0:1:65220] WebSocket version V13 server handshake
+2019-02-14 16:02:19 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker13.newHandshakeResponse(WebSocketServerHandshaker13.java:136) ]
+DEBUG:WebSocket version 13 server handshake key: 2iqYSbiQAj0Gjh9ZEEIRuQ==, response: G1fyyKTuRAEID8gX/y48ej5PvUg=
+2019-02-14 16:02:19 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=82
+2019-02-14 16:02:22 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 16:02:22 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=15
+2019-02-14 16:02:25 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 16:02:25 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=15
+2019-02-14 16:02:26 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 16:02:26 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=15
+2019-02-14 16:02:26 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 16:02:26 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=15
+2019-02-14 16:02:43 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 16:02:43 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=15
+2019-02-14 16:03:48 下午 [Thread: nioEventLoopGroup-2-4][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:165) ]
+DEBUG:[id: 0x22e250b0, L:/0:0:0:0:0:0:0:1:8080 - R:/0:0:0:0:0:0:0:1:65406] WebSocket version V13 server handshake
+2019-02-14 16:03:48 下午 [Thread: nioEventLoopGroup-2-4][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker13.newHandshakeResponse(WebSocketServerHandshaker13.java:136) ]
+DEBUG:WebSocket version 13 server handshake key: a7N0nMpl4nWWuZBH6Q4L+A==, response: sAdQMYIKFq3rCE5/314sMQ7Jw1k=
+2019-02-14 16:03:48 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=82
+2019-02-14 16:03:48 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=82
+2019-02-14 16:03:58 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=8
+2019-02-14 16:03:58 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=2
+2019-02-14 16:03:58 下午 [Thread: nioEventLoopGroup-2-3][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=8 length=2
+2019-02-14 16:03:59 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=8
+2019-02-14 16:03:59 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=2
+2019-02-14 16:03:59 下午 [Thread: nioEventLoopGroup-2-2][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=8 length=2
+2019-02-14 16:03:59 下午 [Thread: nioEventLoopGroup-2-5][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:165) ]
+DEBUG:[id: 0x8f1ca50e, L:/0:0:0:0:0:0:0:1:8080 - R:/0:0:0:0:0:0:0:1:65435] WebSocket version V13 server handshake
+2019-02-14 16:03:59 下午 [Thread: nioEventLoopGroup-2-5][ Class:io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker >> Method: io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker13.newHandshakeResponse(WebSocketServerHandshaker13.java:136) ]
+DEBUG:WebSocket version 13 server handshake key: zNwK4+NkMkRxqcJRpYHl5Q==, response: ofHpukekgasJatukYiOc3J1xVuA=
+2019-02-14 16:03:59 下午 [Thread: nioEventLoopGroup-2-4][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=82
+2019-02-14 16:04:06 下午 [Thread: nioEventLoopGroup-2-4][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:174) ]
+DEBUG:Decoding WebSocket Frame opCode=1
+2019-02-14 16:04:06 下午 [Thread: nioEventLoopGroup-2-4][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:282) ]
+DEBUG:Decoding WebSocket Frame length=46
+2019-02-14 16:04:06 下午 [Thread: nioEventLoopGroup-2-4][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=5
+2019-02-14 16:04:06 下午 [Thread: nioEventLoopGroup-2-5][ Class:io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder >> Method: io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder.encode(WebSocket08FrameEncoder.java:130) ]
+DEBUG:Encoding WebSocket Frame opCode=1 length=5

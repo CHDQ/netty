@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>WS测试</h1>
+<h2>path:chat/broadcastMsg</h2>
 <input type="text" id="content">
 <button type="button" onclick="send()">发送</button>
 </body>
@@ -32,7 +33,9 @@
 
     function send() {
         var content = document.getElementById("content").value
-        ws.send(content)
+        var jsonStr = {'path': 'chat/broadcastMsg'}
+        jsonStr["content"]=content
+        ws.send(JSON.stringify(jsonStr))
     }
 </script>
 </html>
