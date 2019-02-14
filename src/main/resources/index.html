@@ -6,9 +6,12 @@
 </head>
 <body>
 <h1>WS测试</h1>
-<h2>path:chat/broadcastMsg</h2>
-<input type="text" id="content">
-<button type="button" onclick="send()">发送</button>
+<h2>path1:chat/broadcastMsg</h2>
+<input type="text" id="content1">
+<button type="button" onclick="send1()">发送</button>
+<h2>path2:chat/power</h2>
+<input type="text" id="content2">
+<button type="button" onclick="send2()">发送</button>
 </body>
 <script>
     //直接在浏览器中打开该文件即可
@@ -31,9 +34,15 @@
         };
     }
 
-    function send() {
-        var content = document.getElementById("content").value
+    function send1() {
+        var content = document.getElementById("content1").value
         var jsonStr = {'path': 'chat/broadcastMsg'}
+        jsonStr["content"]=content
+        ws.send(JSON.stringify(jsonStr))
+    }
+    function send2() {
+        var content = document.getElementById("content2").value
+        var jsonStr = {'path': 'chat/power'}
         jsonStr["content"]=content
         ws.send(JSON.stringify(jsonStr))
     }

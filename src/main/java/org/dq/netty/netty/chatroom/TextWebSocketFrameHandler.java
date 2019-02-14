@@ -13,14 +13,19 @@ import org.dq.netty.netty.chatroom.frame.RouteMapping;
 public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
     private final ChannelGroup channels;
 
-    public TextWebSocketFrameHandler(ChannelGroup channels) {
+    private RouteMapping routeMapping;
+
+
+    public TextWebSocketFrameHandler(ChannelGroup channels,RouteMapping routeMapping) {
+
         this.channels = channels;
+        this.routeMapping = routeMapping;
     }
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
         String str = msg.text();//修改请求过来的数据
-        RouteMapping.makeRoute(str);//路由到对应的处理方法中
+        routeMapping.makeRoute(str);//路由到对应的处理方法中
 //        ByteBuf buf = Unpooled.copiedBuffer(str, CharsetUtil.UTF_8);
 //        ChatServer.publishMsg(new TextWebSocketFrame(buf));//广播消息
 //        channels.writeAndFlush(new TextWebSocketFrame(buf));//增加引用计数，并将接收到的消息，写入到所有连接的客户端

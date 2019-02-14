@@ -15,25 +15,37 @@ import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.util.CharsetUtil;
 import io.netty.util.concurrent.ImmediateEventExecutor;
 import org.dq.netty.netty.chatroom.frame.RouteMapping;
+import org.dq.netty.netty.chatroom.frame.SpringConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 import java.net.InetSocketAddress;
 
+@Component
 public class ChatServer {
     private final static ChannelGroup CHANNELS = new DefaultChannelGroup(ImmediateEventExecutor.INSTANCE);
     private final EventLoopGroup group = new NioEventLoopGroup();
     private Channel channel;
+    @Autowired
+    private RouteMapping routeMapping;
+    @Autowired
+    private ChannelInitializer<Channel> initializer;
 
     public ChannelFuture start(InetSocketAddress address) {
         var bootStart = new ServerBootstrap();
-        bootStart.group(group).channel(NioServerSocketChannel.class).childHandler(createInitializer(CHANNELS));
+        bootStart.group(group).channel(NioServerSocketChannel.class).childHandler(initializer);
         ChannelFuture future = bootStart.bind(address);
         future.syncUninterruptibly();
         channel = future.channel();//父channel
         return future;
     }
 
-    public ChannelInitializer<Channel> createInitializer(ChannelGroup channels) {
-        return new ChatServerInitializer(channels);
+    @Bean
+    public ChannelInitializer<Channel> createInitializer() {
+        return new ChatServerInitializer(CHANNELS, routeMapping);
     }
 
     public void destroy() {
@@ -55,8 +67,13 @@ public class ChatServer {
     }
 
     public static void main(String[] args) {
-        RouteMapping.initRouteMap();
-        var chatServer = new ChatServer();
+        //采用注解配置的方式
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        applicationContext.register(SpringConfig.class);
+        applicationContext.refresh();
+        //采用xml配置的方式
+        //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");//spring托管
+        ChatServer chatServer = applicationContext.getBean(ChatServer.class);
         ChannelFuture future = chatServer.start(new InetSocketAddress(8080));
         //增加关闭钩子,在jvm关闭的时候调用
         Runtime.getRuntime().addShutdownHook(new Thread(() -> chatServer.destroy()));
