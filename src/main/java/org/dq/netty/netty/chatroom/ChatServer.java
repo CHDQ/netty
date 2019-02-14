@@ -17,7 +17,6 @@ import io.netty.util.concurrent.ImmediateEventExecutor;
 import org.dq.netty.netty.chatroom.frame.RouteMapping;
 import org.dq.netty.netty.chatroom.frame.SpringConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;

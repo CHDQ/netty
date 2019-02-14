@@ -16,7 +16,7 @@ import java.util.Map;
 
 
 /**
- * 路由到mapping
+ * 路由到mapping,实现ApplicationContextAware，获取applicationContext对象
  */
 @Component
 public class RouteMapping implements ApplicationContextAware {
@@ -29,6 +29,12 @@ public class RouteMapping implements ApplicationContextAware {
 
     private Map<String, Method> routeMap = new HashMap<>();//实际的应用，value应该存储该method的相关信息，而不是method对象
 
+    /**
+     * 接收到消息之后，将消息分配给各个注解标记的方法
+     *
+     * @param msg
+     * @throws Exception
+     */
     public void makeRoute(String msg) throws Exception {
         try {
             //{'path':'chat/broadcastMsg','content':'test'}
@@ -57,18 +63,19 @@ public class RouteMapping implements ApplicationContextAware {
         }
     }
 
-    @Deprecated
-    public void initRouteMap() {
-        synchronized (RouteMapping.class) {
+//    @Deprecated
+//    public void initRouteMap() {
+//        synchronized (RouteMapping.class) {
 
 //            log.info("init mapping");
 //            routeMap = new HashMap<>();
-            /**
-             * 不稳定
-             * MethodAnnotationsScanner指定扫描方法
-             * TypeAnnotationsScanner指定扫描类
-             * SubTypesScanner指定扫描子类
-             */
+
+    /**
+     * 不稳定
+     * MethodAnnotationsScanner指定扫描方法
+     * TypeAnnotationsScanner指定扫描类
+     * SubTypesScanner指定扫描子类
+     */
 //            Reflections reflections = new Reflections("org.dq.netty.netty", new MethodAnnotationsScanner(), new TypeAnnotationsScanner(), new SubTypesScanner());//扫描org.dq.netty包下面的类,MethodAnnotationsScanner指定了扫描方法，将会无法扫描到类，默认是扫描类
 //            Set<Class<?>> classes = reflections.getTypesAnnotatedWith(WSMapping.class);//获取所有WSMapping注解标注的类
 //            Set<Method> methodSet = reflections.getMethodsAnnotatedWith(WSMapping.class);//获取所有注解标记的方法
@@ -77,10 +84,16 @@ public class RouteMapping implements ApplicationContextAware {
 //                String methodName = method.getAnnotation(WSMapping.class).value();
 //                routeMap.put(controllerName + "/" + methodName, method);
 //            });
-        }
+//        }
+//
+//    }
 
-    }
-
+    /**
+     * 获取ApplicationContext
+     *
+     * @param applicationContext
+     * @throws BeansException
+     */
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
