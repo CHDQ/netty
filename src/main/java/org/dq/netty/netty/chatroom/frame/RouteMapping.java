@@ -35,8 +35,10 @@ public class RouteMapping {
                     throw new Exception("makeRoute has no given path");
                 }
                 method.setAccessible(true);
+                /**
+                 * 参数处理没有做过多的验证比较，只是简单的使用字符串传递，如果需要完善的话，需要比较验证参数类型,通过is开头的函数进行比较
+                 */
                 Class<?>[] parameterTypes = method.getParameterTypes();
-
                 Object[] parameter = new Object[parameterTypes.length];
                 parameter[0] = jsonObject.get("content");
                 method.invoke(method.getDeclaringClass().getConstructor().newInstance(), parameter);//反射调用
