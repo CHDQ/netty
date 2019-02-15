@@ -1,4 +1,4 @@
-package org.dq.netty.netty.udp;
+package org.dq.netty.netty.udp.out;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 
 @Data
 public class LogEvent {
-    private static final byte SEPARATOR = ':';
+    public static final byte SEPARATOR = '_';
     private final InetSocketAddress source;
     private final String logFile;
     private final String msg;

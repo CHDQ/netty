@@ -10,13 +10,13 @@ import org.springframework.stereotype.Component;
 public class ChatController {
     @WSMapping("broadcastMsg")
     public void broadcastMsg(String msg) {
-        log.info("access broadcastMsg msg:"+msg);
+        log.info("access broadcastMsg msg:" + msg);
         ChatServer.publishMsg(msg);//直接广播消息,路由实现不同逻辑
     }
 
     @WSMapping("power")
     public void power(String msg) {
-        log.info("access power msg:"+msg);
+        log.info("access power msg:" + msg);
         ChatServer.publishMsg(msg + ".chdq");//直接广播消息,路由实现不同逻辑
     }
 }
