@@ -53,3 +53,7 @@
 - 146页
     >引用计数对于编码器和解码器来说，其过程也是相当的简单：一旦消息被编码或者解码，它就会被 ReferenceCountUtil.release(message)调用自动释放。如果你需要保留引用以便稍后使用，那么你可以调用 ReferenceCountUtil.retain(message)方法。这将会增加该引用计数，从而防止该消息被释放。
 - 如果使用 ByteToMessageDecoder 不会引入太多的复杂性，那么请使用它；否则，请使用 ReplayingDecoder
+
+## 6. **_channel_**
+
+- 长连接的时候，在pipeline中的只要是连接没有断，处理长连接的数据的channel都是一个实例
