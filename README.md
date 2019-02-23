@@ -1,7 +1,7 @@
 # _netty 实战关键笔记_
 ![image](https://img.shields.io/badge/jdk-11-brightgreen.svg)
 ![image](https://img.shields.io/badge/netty-4.1.33-brightgreen.svg)
-##文档<https://netty.io/4.1/api/index.html>
+## 文档<https://netty.io/4.1/api/index.html>
 ## 1. **_资源管理_**
 
 - 章节 6.1
